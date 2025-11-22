@@ -12,12 +12,6 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose.connect(
   'mongodb+srv://123prasad4009:%40Pp1020975@cluster0.fjnhg5x.mongodb.net/healthdata',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000,
-    family: 4
-  }
 )
 .then(() => console.log("✅ MongoDB connected"))
 .catch(err => console.error("❌ MongoDB connection error:", err));
