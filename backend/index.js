@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 })
 
-app.get('/status', (req, res) => {
+app.post('/status', (req, res) => {
     const status=req.body;
     console.log("Status received:",status)
     res.json({ status: 'Server is running', data: status });
