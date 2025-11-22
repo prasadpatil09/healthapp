@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 
 app.get('/status', (req, res) => {
     const status=req.body;
+    console.log("Status received:",status)
     res.json({ status: 'Server is running', data: status });
 })
 
