@@ -18,6 +18,10 @@ mongoose.connect(
 
 
 // POST /status
+app.get("/", (req, res)=>{
+  res.send("API is running")
+})
+
 app.post("/status", async (req, res) => {
   try {
     const { deviceId, heartRate, timestamp, battery, extraData } = req.body;
