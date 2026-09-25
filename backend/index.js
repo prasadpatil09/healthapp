@@ -18,8 +18,9 @@ mongoose.connect(
 
 
 // POST /status
-app.get("/", (req, res)=>{
-  res.send("API is running")
+app.get("/", async(req, res)=>{
+  const data= await HealthData.find();
+  res.send(data)
 })
 
 app.post("/status", async (req, res) => {
